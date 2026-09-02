@@ -1,298 +1,290 @@
 <!doctype html>
-<html lang="zh-Hant">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>eTrade｜國際商務 AI 應用</title>
+  <title>Ita Tsai — layout study</title>
   <style>
-    :root{
-      --text:#111;
-      --muted:#666;
-      --line:#e9e9e9;
-      --bg:#fff;
-    }
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
     body{
       margin:0;
-      background:var(--bg);
-      color:var(--text);
-      font-family:Arial,"Helvetica Neue","Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
-      font-size:16px;
-      line-height:1.65;
+      background:#fff;
+      color:#171717;
+      font-family:Arial,"Helvetica Neue",Helvetica,sans-serif;
+      font-size:15px;
+      line-height:1.58;
     }
     a{color:inherit;text-decoration:none}
     a:hover{text-decoration:underline}
-    .site{
-      width:min(760px, calc(100% - 40px));
+    .page{
+      width:min(820px,calc(100% - 42px));
       margin:0 auto;
-      padding:42px 0 80px;
+      padding:36px 0 64px;
     }
-    nav{
+    .topbar{
       display:flex;
-      gap:22px;
       justify-content:flex-end;
-      font-size:14px;
+      gap:24px;
+      font-size:13px;
       margin-bottom:62px;
     }
-    .brand{
-      margin-bottom:74px;
-    }
-    .brand h1{
-      font-size:34px;
-      line-height:1.15;
+    .hero{margin-bottom:72px}
+    .hero h1{
+      font-size:32px;
+      line-height:1.1;
       font-weight:600;
-      margin:0 0 10px;
-      letter-spacing:-0.03em;
+      letter-spacing:-.03em;
+      margin:0 0 8px;
     }
-    .brand .subtitle{
-      font-size:13px;
+    .role{
+      font-size:12px;
       font-weight:600;
-      letter-spacing:.03em;
-      margin-bottom:22px;
+      letter-spacing:.02em;
+      margin-bottom:20px;
     }
-    .brand p{
+    .hero p{
+      max-width:690px;
       margin:0 0 12px;
-      max-width:680px;
     }
-    section{
-      padding:0 0 68px;
-    }
-    h2{
-      font-size:24px;
-      font-weight:600;
-      margin:0 0 26px;
-      letter-spacing:-0.02em;
-    }
-    h3{
-      font-size:17px;
-      margin:0 0 6px;
-      font-weight:600;
-    }
-    h4{
+    .text-link{
+      display:inline-block;
+      margin-top:6px;
       font-size:13px;
-      margin:0 0 14px;
+      text-decoration:underline;
+    }
+    section{margin:0 0 72px}
+    section>h2{
+      font-size:22px;
       font-weight:600;
-      color:var(--muted);
+      letter-spacing:-.02em;
+      margin:0 0 28px;
     }
-    p{margin:0 0 14px}
-    ul{
-      margin:8px 0 18px;
-      padding-left:20px;
+    .project{margin-bottom:52px}
+    .kicker{
+      font-size:12px;
+      font-weight:600;
+      color:#595959;
+      margin-bottom:5px;
     }
-    li{margin-bottom:6px}
-    .module{
-      padding:0 0 48px;
-      margin-bottom:48px;
-      border-bottom:1px solid var(--line);
+    .project h3{
+      font-size:15px;
+      line-height:1.35;
+      margin:0 0 18px;
+      font-weight:600;
     }
-    .module:last-child{
-      border-bottom:0;
-      margin-bottom:0;
+    .media{
+      width:100%;
+      aspect-ratio:16/9;
+      background:#f1f1f1;
+      border:1px solid #e8e8e8;
+      display:grid;
+      place-items:center;
+      color:#8c8c8c;
+      font-size:12px;
+      margin:0 0 16px;
     }
-    .meta{
-      font-size:13px;
-      color:var(--muted);
+    .media.portrait{aspect-ratio:4/3}
+    .project ul{
+      margin:0;
+      padding-left:18px;
+      max-width:690px;
+    }
+    .project li{margin:0 0 5px}
+    .triptych{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:12px;
+      margin:14px 0 14px;
+    }
+    .triptych .media{
+      aspect-ratio:1/1;
+      margin:0;
+    }
+    .articles{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:34px 28px;
+    }
+    .article .thumb{
+      aspect-ratio:16/10;
+      background:#f1f1f1;
+      border:1px solid #e8e8e8;
+      display:grid;
+      place-items:center;
+      color:#8c8c8c;
+      font-size:12px;
       margin-bottom:10px;
     }
-    .practice{
-      margin-top:18px;
-    }
-    .practice strong,
-    .outcome strong{
-      display:block;
-      font-size:13px;
+    .article .source{
+      font-size:12px;
+      font-weight:600;
       margin-bottom:4px;
     }
-    .overview{
-      width:100%;
-      border-collapse:collapse;
-      margin-top:24px;
+    .article h3{
       font-size:14px;
-    }
-    .overview th,
-    .overview td{
-      border-top:1px solid var(--line);
-      padding:12px 8px;
-      text-align:left;
-      vertical-align:top;
-    }
-    .overview th{
+      line-height:1.45;
       font-weight:600;
-    }
-    .small{
-      font-size:13px;
-      color:var(--muted);
+      margin:0;
     }
     footer{
-      border-top:1px solid var(--line);
-      padding-top:26px;
-      font-size:12px;
-      color:var(--muted);
+      border-top:1px solid #ececec;
+      padding-top:24px;
+      font-size:11px;
+      color:#777;
     }
-    @media (max-width:640px){
-      .site{width:min(100% - 26px,760px);padding-top:26px}
-      nav{justify-content:flex-start;margin-bottom:44px}
-      .brand{margin-bottom:54px}
-      .brand h1{font-size:30px}
-      section{padding-bottom:54px}
-      .overview{display:block;overflow-x:auto;white-space:nowrap}
+    .demo{
+      position:fixed;
+      right:14px;
+      bottom:14px;
+      background:#171717;
+      color:#fff;
+      padding:7px 10px;
+      font-size:10px;
+      letter-spacing:.04em;
+    }
+    @media(max-width:640px){
+      .page{width:min(100% - 28px,820px);padding-top:24px}
+      .topbar{justify-content:flex-start;margin-bottom:48px}
+      .hero{margin-bottom:58px}
+      section{margin-bottom:58px}
+      .articles{grid-template-columns:1fr}
+      .triptych{grid-template-columns:1fr}
+      .triptych .media{aspect-ratio:16/10}
+      .demo{display:none}
     }
   </style>
 </head>
 <body>
-  <div class="site">
-    <nav>
+  <div class="page">
+    <nav class="topbar">
       <a href="#about">About</a>
-      <a href="#goal">GOAL</a>
       <a href="#contact">Contact</a>
     </nav>
 
-    <header class="brand" id="about">
-      <h1>eTrade</h1>
-      <div class="subtitle">INTERNATIONAL BUSINESS × AI</div>
-      <p>以國際商務在職學習者為核心，從生成式 AI 的內容產出，逐步延伸至辦公協作、AI Agent 執行，以及企業與個人的 AI 槓桿設計。</p>
-      <p>重點不是單純學習工具，而是實作、工作流程重構、商業判斷、風險控制與可衡量效益。</p>
+    <header class="hero" id="about">
+      <h1>Ita Tsai</h1>
+      <div class="role">Project Manager | Marketing Multimedia Communications</div>
+      <p>I’m Ita, a community-focused multimedia professional working across journalism, filmmaking, marketing and project management.</p>
+      <p>Her work moves between international teams, visual storytelling, branded content and multilingual communications.</p>
+      <a class="text-link" href="#filmography">View selected work</a>
     </header>
 
     <main>
-      <section id="goal">
-        <h2>GOAL｜國際商務 AI 應用</h2>
-        <h4>Generation × Office + AI × Agent × Leverage</h4>
-        <p>從「生成內容」走向「工作協作」，再進入「代理執行」，最後把 AI 轉化為可衡量的商業槓桿。</p>
+      <section id="filmography">
+        <h2>Filmography</h2>
 
-        <table class="overview">
-          <thead>
-            <tr>
-              <th>模組</th>
-              <th>核心概念</th>
-              <th>國際商務應用</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>G — Generation</td>
-              <td>生成內容</td>
-              <td>開發信、產品資料、市場研究、跨文化溝通</td>
-            </tr>
-            <tr>
-              <td>O — Office + AI</td>
-              <td>辦公協作</td>
-              <td>報表分析、合約閱讀、簡報、交易資料整理</td>
-            </tr>
-            <tr>
-              <td>A — Agent</td>
-              <td>代理執行</td>
-              <td>B2B 開發、客戶研究、追蹤、流程自動化</td>
-            </tr>
-            <tr>
-              <td>L — Leverage</td>
-              <td>商業槓桿</td>
-              <td>效率提升、資源配置、決策支援、服務重設計</td>
-            </tr>
-          </tbody>
-        </table>
+        <article class="project">
+          <div class="kicker">Documentary</div>
+          <h3>Chino Capuchino (2020)</h3>
+          <div class="media">VIDEO / IMAGE PLACEHOLDER</div>
+          <ul>
+            <li>Documentary project focused on East Asian diaspora experiences in Spain.</li>
+            <li>Production, editing and visual storytelling.</li>
+          </ul>
+        </article>
+
+        <article class="project">
+          <div class="kicker">Horror Short Film</div>
+          <h3>Fresh Cut (2020)</h3>
+          <div class="media">VIDEO PLACEHOLDER</div>
+          <ul>
+            <li>Original short film developed from concept through production.</li>
+            <li>Direction and coordination of cast and crew.</li>
+          </ul>
+        </article>
+
+        <article class="project">
+          <div class="kicker">Drama Short Film</div>
+          <h3>Living The Dream (2019)</h3>
+          <div class="media">VIDEO PLACEHOLDER</div>
+          <ul>
+            <li>Original screenplay, direction and production coordination.</li>
+          </ul>
+        </article>
       </section>
 
       <section>
-        <h2>Modules</h2>
-
-        <article class="module">
-          <div class="meta">G — Generation</div>
-          <h3>生成內容</h3>
-          <h4>內容能力</h4>
-          <p>從生成式 AI 與 Prompt 基礎開始，把國際商務需求轉化為可修改、可查證、可交付的文字、研究、翻譯與多模態內容。</p>
+        <h2>Project Management</h2>
+        <article class="project">
+          <div class="kicker">Global Campaign</div>
+          <h3>Synology Productivity Suite Webinar (2024)</h3>
+          <div class="media">WEBINAR PLACEHOLDER</div>
           <ul>
-            <li>Prompt 結構：角色、任務、背景、限制、資料與輸出格式</li>
-            <li>Zero-shot、Few-shot、範例導向與迭代式 Prompt</li>
-            <li>商務 Email、提案、產品說明、FAQ、SOP 與報告初稿</li>
-            <li>多語翻譯、跨文化語氣與市場在地化</li>
-            <li>市場／競爭者研究、摘要、比較與來源查證</li>
-            <li>Hallucination（幻覺）辨識、引用與人工查證</li>
+            <li>Cross-team campaign coordination across multiple regions.</li>
+            <li>Campaign collateral, scripting and product communication.</li>
           </ul>
-          <div class="practice">
-            <strong>國際商務實作</strong>
-            將一份台灣產品資料轉換為英文產品介紹、海外經銷商開發信、FAQ，以及針對不同國家市場調整的行銷版本。
+        </article>
+      </section>
+
+      <section>
+        <h2>Content Creation</h2>
+        <article class="project">
+          <div class="kicker">Original Show</div>
+          <h3>Comidita con Ita (2018)</h3>
+          <div class="triptych">
+            <div class="media">IMAGE 01</div>
+            <div class="media">IMAGE 02</div>
+            <div class="media">IMAGE 03</div>
           </div>
-          <div class="outcome">
-            <strong>學習成果</strong>
-            不只會「叫 AI 寫」，而是能定義需求、提供背景、要求格式、反覆修正並驗證結果。
-          </div>
+          <ul>
+            <li>Original video-series concept and production.</li>
+            <li>Research, coordination and content development.</li>
+          </ul>
         </article>
 
-        <article class="module">
-          <div class="meta">O — Office + AI</div>
-          <h3>AI 工作協作</h3>
-          <h4>工作能力</h4>
-          <p>從單次生成進一步把 AI 嵌入文件、資料、簡報、Email、會議與知識管理，形成可重複、可交付的工作流程。</p>
+        <article class="project">
+          <div class="kicker">PBS LIVE reporting</div>
+          <h3>West Side Stories</h3>
+          <div class="media">REPORTING VIDEO PLACEHOLDER</div>
           <ul>
-            <li>Word／文件：摘要、改寫、校對、Executive Summary、版本比較、合約與 PDF 重點萃取</li>
-            <li>Excel／資料：公式、資料清理、分類、異常檢查、樞紐分析、趨勢與基本預測</li>
-            <li>PowerPoint／簡報：從報告到架構、資料敘事、一頁一重點、圖表與管理結論</li>
-            <li>Email／會議：大量郵件摘要、回覆草稿、會議決議、Action Items 與追蹤</li>
-            <li>知識管理：從多份內部檔案查詢資訊並保留來源</li>
+            <li>Weekly reporting, scripting, filming and editing.</li>
+            <li>On-site production planning and team coordination.</li>
           </ul>
-          <div class="practice">
-            <strong>國際商務實作</strong>
-            輸入一批出口交易資料，由 AI 協助整理 Excel、找出異常與趨勢、建立圖表，再轉為主管簡報與會議摘要。
-          </div>
-          <div class="outcome">
-            <strong>學習成果</strong>
-            從「AI 幫我做一件事」提升到「重新設計整段工作流程」。
-          </div>
         </article>
 
-        <article class="module">
-          <div class="meta">A — Agent</div>
-          <h3>AI 代理執行</h3>
-          <h4>執行能力</h4>
-          <p>理解 Chatbot、Copilot、Workflow 與 Agent 的差異，並設計 AI 依目標進行多步驟工作的基本代理流程。</p>
-          <p><strong>基本循環：</strong>理解目標 → 規劃 → 執行 → 檢查 → 回報／升級人工處理</p>
-          <ul>
-            <li>Goal：任務目標與成功條件</li>
-            <li>Tools / Actions：搜尋、文件、Email、資料庫、API 等工具</li>
-            <li>Memory、Workflow、Trigger</li>
-            <li>Human-in-the-loop：人工批准、例外處理與最終責任</li>
-            <li>B2B 潛在客戶研究、海外市場情報、Email Follow-up</li>
-          </ul>
-          <div class="practice">
-            <strong>國際商務實作</strong>
-            設計 B2B Overseas Sales Agent：搜尋潛在客戶 → 公司背景調查 → 客戶評分 → 產生開發信 → 建立 Follow-up 清單 → 人工確認。
-          </div>
-          <div class="outcome">
-            <strong>學習成果</strong>
-            知道什麼適合交給 Agent，什麼必須由人決策。
+        <article class="project">
+          <div class="kicker">Social Media Management</div>
+          <h3>@CoolWallet</h3>
+          <div class="triptych">
+            <div class="media">TWITTER</div>
+            <div class="media">FACEBOOK</div>
+            <div class="media">INSTAGRAM</div>
           </div>
         </article>
+      </section>
 
-        <article class="module">
-          <div class="meta">L — Leverage</div>
-          <h3>AI 商業槓桿</h3>
-          <h4>商業放大能力</h4>
-          <p>從工具操作提升到價值設計，判斷 AI 最值得投入的位置，並從個人、流程、決策與商業模式四個層次衡量槓桿效果。</p>
-          <ul>
-            <li>Personal Leverage｜個人槓桿</li>
-            <li>Process Leverage｜流程槓桿</li>
-            <li>Decision Leverage｜決策槓桿</li>
-            <li>Business Model Leverage｜商業模式槓桿</li>
-          </ul>
-          <p>KPI 可涵蓋 Time Saved、Cost Saved、Error Reduction、Response Speed，以及營收、轉換率與客戶價值等結果指標。</p>
-          <div class="practice">
-            <strong>國際商務實作</strong>
-            完成 AI Leverage Canvas：問題 → 現行流程 → AI 可介入點 → 人機分工 → 風險 → KPI → 預期效益 → 導入計畫。
-          </div>
-          <div class="outcome">
-            <strong>學習成果</strong>
-            不以「用了多少 AI」衡量成功，而以流程、決策、成本、速度與可持續商業價值判斷。
-          </div>
-        </article>
+      <section>
+        <h2>Published Articles</h2>
+        <div class="articles">
+          <article class="article">
+            <div class="thumb">ARTICLE IMAGE</div>
+            <div class="source">Chicago Tribune</div>
+            <h3>Fighting for safer streets: how young leaders bring change to Chicago</h3>
+          </article>
+          <article class="article">
+            <div class="thumb">ARTICLE IMAGE</div>
+            <div class="source">Synology</div>
+            <h3>Cloud storage, enterprise workflows and changing infrastructure</h3>
+          </article>
+          <article class="article">
+            <div class="thumb">ARTICLE IMAGE</div>
+            <div class="source">CoolBitX</div>
+            <h3>Product and technology communications</h3>
+          </article>
+          <article class="article">
+            <div class="thumb">ARTICLE IMAGE</div>
+            <div class="source">Selected Writing</div>
+            <h3>International reporting and multimedia journalism</h3>
+          </article>
+        </div>
       </section>
     </main>
 
     <footer id="contact">
-      <p>eTrade · International Business AI Learning</p>
-      <p class="small">第一版極簡測試版。內容整理自 Notion「GOAL｜國際商務 AI 應用」。</p>
+      © All Rights Reserved
     </footer>
   </div>
+  <div class="demo">LAYOUT STUDY</div>
 </body>
 </html>
