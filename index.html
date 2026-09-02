@@ -59,6 +59,16 @@
       box-shadow:var(--shadow);
     }
     .card h3{margin:0 0 8px;font-size:1.35rem}
+    .card-link{
+      display:block;
+      color:inherit;
+      text-decoration:none;
+      transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease;
+    }
+    .card-link:hover{transform:translateY(-3px);border-color:#93c5fd;box-shadow:0 16px 36px rgba(37,99,235,.14)}
+    .card-link:focus-visible{outline:3px solid #93c5fd;outline-offset:3px}
+    .card-link p{margin:8px 0 16px}
+    .open-link{color:var(--accent);font-weight:800}
     .tag{font-size:.82rem;color:var(--accent);font-weight:800;letter-spacing:.05em;text-transform:uppercase}
     .card p{color:#475569}
     ul{padding-left:1.2rem;color:#334155}
@@ -100,9 +110,12 @@
         <article class="card">
           <h3>AA</h3>
         </article>
-        <article class="card">
-          <h3>BB</h3>
-        </article>
+        <a class="card card-link" href="https://app.notion.com/p/Prompt-Literacy-AI-3ca65edfe79a81e58a6eeb437cbd42ef?source=copy_link" target="_blank" rel="noopener noreferrer">
+          <div class="tag">BB · Learning Hub</div>
+          <h3>🎁 Prompt Literacy｜AI時代提問素養</h3>
+          <p>從商務、AI、國際貿易與跨領域知識出發的提問式學習資源。</p>
+          <div class="open-link">開啟 Prompt Literacy →</div>
+        </a>
       </div>
       <div class="formula">
         <strong>GOAL = Generation × Office + AI × Agent × Leverage</strong><br>
