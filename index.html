@@ -2,194 +2,297 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#0f172a">
-  <title>GOAL｜國際商務 AI 應用</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>eTrade｜國際商務 AI 應用</title>
   <style>
     :root{
-      --bg:#f8fafc;
-      --surface:#ffffff;
-      --text:#172033;
-      --muted:#64748b;
-      --line:#e2e8f0;
-      --accent:#2563eb;
-      --accent-soft:#eff6ff;
-      --shadow:0 12px 30px rgba(15,23,42,.08);
+      --text:#111;
+      --muted:#666;
+      --line:#e9e9e9;
+      --bg:#fff;
     }
     *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
     body{
       margin:0;
-      font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
-      background:linear-gradient(180deg,#eef4ff 0,#f8fafc 30%);
+      background:var(--bg);
       color:var(--text);
-      line-height:1.7;
+      font-family:Arial,"Helvetica Neue","Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
+      font-size:16px;
+      line-height:1.65;
     }
-    .wrap{width:min(1100px,calc(100% - 32px));margin:auto}
-    header{padding:72px 0 40px}
-    .eyebrow{
-      display:inline-block;
-      padding:6px 12px;
-      border-radius:999px;
-      background:var(--accent-soft);
-      color:var(--accent);
-      font-weight:700;
-      font-size:.9rem;
-      letter-spacing:.04em;
+    a{color:inherit;text-decoration:none}
+    a:hover{text-decoration:underline}
+    .site{
+      width:min(760px, calc(100% - 40px));
+      margin:0 auto;
+      padding:42px 0 80px;
     }
-    h1{font-size:clamp(2.3rem,6vw,4.6rem);line-height:1.05;margin:18px 0 20px}
-    .lead{max-width:800px;font-size:1.15rem;color:var(--muted)}
-    .formula{
-      margin-top:28px;
-      padding:22px 24px;
-      border:1px solid #bfdbfe;
-      background:rgba(255,255,255,.9);
-      border-radius:18px;
-      box-shadow:var(--shadow);
+    nav{
+      display:flex;
+      gap:22px;
+      justify-content:flex-end;
+      font-size:14px;
+      margin-bottom:62px;
     }
-    .formula strong{color:var(--accent)}
-    section{padding:28px 0 46px}
-    h2{font-size:1.8rem;margin:0 0 16px}
-    .intro{max-width:900px;color:#334155}
-    .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:24px}
-    .card{
-      background:var(--surface);
-      border:1px solid var(--line);
-      border-radius:18px;
-      padding:24px;
-      box-shadow:var(--shadow);
+    .brand{
+      margin-bottom:74px;
     }
-    .card h3{margin:0 0 8px;font-size:1.35rem}
-    .tag{font-size:.82rem;color:var(--accent);font-weight:800;letter-spacing:.05em;text-transform:uppercase}
-    .card p{color:#475569}
-    ul{padding-left:1.2rem;color:#334155}
+    .brand h1{
+      font-size:34px;
+      line-height:1.15;
+      font-weight:600;
+      margin:0 0 10px;
+      letter-spacing:-0.03em;
+    }
+    .brand .subtitle{
+      font-size:13px;
+      font-weight:600;
+      letter-spacing:.03em;
+      margin-bottom:22px;
+    }
+    .brand p{
+      margin:0 0 12px;
+      max-width:680px;
+    }
+    section{
+      padding:0 0 68px;
+    }
+    h2{
+      font-size:24px;
+      font-weight:600;
+      margin:0 0 26px;
+      letter-spacing:-0.02em;
+    }
+    h3{
+      font-size:17px;
+      margin:0 0 6px;
+      font-weight:600;
+    }
+    h4{
+      font-size:13px;
+      margin:0 0 14px;
+      font-weight:600;
+      color:var(--muted);
+    }
+    p{margin:0 0 14px}
+    ul{
+      margin:8px 0 18px;
+      padding-left:20px;
+    }
+    li{margin-bottom:6px}
+    .module{
+      padding:0 0 48px;
+      margin-bottom:48px;
+      border-bottom:1px solid var(--line);
+    }
+    .module:last-child{
+      border-bottom:0;
+      margin-bottom:0;
+    }
+    .meta{
+      font-size:13px;
+      color:var(--muted);
+      margin-bottom:10px;
+    }
     .practice{
-      margin-top:16px;
-      padding:14px 16px;
-      border-left:4px solid var(--accent);
-      background:var(--accent-soft);
-      border-radius:10px;
-      color:#1e3a8a;
+      margin-top:18px;
     }
-    .outcome{
-      margin-top:14px;
-      font-weight:700;
-      color:#0f172a;
+    .practice strong,
+    .outcome strong{
+      display:block;
+      font-size:13px;
+      margin-bottom:4px;
     }
-    .table-wrap{overflow-x:auto;background:#fff;border:1px solid var(--line);border-radius:16px}
-    table{width:100%;border-collapse:collapse;min-width:760px}
-    th,td{padding:14px 16px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
-    th{background:#f8fafc}
-    tr:last-child td{border-bottom:0}
-    .lever-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:14px 0}
-    .mini{border:1px solid var(--line);border-radius:14px;padding:16px;background:#fbfdff}
-    footer{padding:28px 0 56px;color:var(--muted);font-size:.9rem}
-    @media (max-width:760px){
-      header{padding-top:44px}
-      .grid,.lever-grid{grid-template-columns:1fr}
-      .wrap{width:min(100% - 22px,1100px)}
-      .card{padding:20px}
+    .overview{
+      width:100%;
+      border-collapse:collapse;
+      margin-top:24px;
+      font-size:14px;
+    }
+    .overview th,
+    .overview td{
+      border-top:1px solid var(--line);
+      padding:12px 8px;
+      text-align:left;
+      vertical-align:top;
+    }
+    .overview th{
+      font-weight:600;
+    }
+    .small{
+      font-size:13px;
+      color:var(--muted);
+    }
+    footer{
+      border-top:1px solid var(--line);
+      padding-top:26px;
+      font-size:12px;
+      color:var(--muted);
+    }
+    @media (max-width:640px){
+      .site{width:min(100% - 26px,760px);padding-top:26px}
+      nav{justify-content:flex-start;margin-bottom:44px}
+      .brand{margin-bottom:54px}
+      .brand h1{font-size:30px}
+      section{padding-bottom:54px}
+      .overview{display:block;overflow-x:auto;white-space:nowrap}
     }
   </style>
 </head>
 <body>
-  <header>
-    <div class="wrap">
-      <span class="eyebrow">International Business × AI</span>
-      <h1>GOAL｜國際商務 AI 應用</h1>
-      <p class="lead">以國際商務在職學習者為核心，從生成式 AI 的內容產出，逐步延伸至辦公協作、AI Agent 執行，以及企業與個人的 AI 槓桿設計。</p>
-      <div class="formula">
-        <strong>GOAL = Generation × Office + AI × Agent × Leverage</strong><br>
-        從「生成內容」走向「工作協作」，再進入「代理執行」，最後把 AI 轉化為可衡量的商業槓桿。
-      </div>
-    </div>
-  </header>
+  <div class="site">
+    <nav>
+      <a href="#about">About</a>
+      <a href="#goal">GOAL</a>
+      <a href="#contact">Contact</a>
+    </nav>
 
-  <main class="wrap">
-    <section>
-      <h2>課程定位</h2>
-      <p class="intro">重點不是單純學習工具，而是實作、工作流程重構、商業判斷、風險控制與可衡量效益。</p>
+    <header class="brand" id="about">
+      <h1>eTrade</h1>
+      <div class="subtitle">INTERNATIONAL BUSINESS × AI</div>
+      <p>以國際商務在職學習者為核心，從生成式 AI 的內容產出，逐步延伸至辦公協作、AI Agent 執行，以及企業與個人的 AI 槓桿設計。</p>
+      <p>重點不是單純學習工具，而是實作、工作流程重構、商業判斷、風險控制與可衡量效益。</p>
+    </header>
 
-      <div class="table-wrap">
-        <table>
+    <main>
+      <section id="goal">
+        <h2>GOAL｜國際商務 AI 應用</h2>
+        <h4>Generation × Office + AI × Agent × Leverage</h4>
+        <p>從「生成內容」走向「工作協作」，再進入「代理執行」，最後把 AI 轉化為可衡量的商業槓桿。</p>
+
+        <table class="overview">
           <thead>
-            <tr><th>模組</th><th>核心概念</th><th>主要能力</th><th>國際商務應用</th></tr>
+            <tr>
+              <th>模組</th>
+              <th>核心概念</th>
+              <th>國際商務應用</th>
+            </tr>
           </thead>
           <tbody>
-            <tr><td><strong>G — Generation</strong></td><td>生成內容</td><td>Prompt、寫作、研究、翻譯、多模態生成</td><td>開發信、產品資料、市場研究、跨文化溝通</td></tr>
-            <tr><td><strong>O — Office + AI</strong></td><td>辦公協作</td><td>文件、試算表、簡報、郵件、會議、知識管理</td><td>報表分析、合約閱讀、簡報、交易資料整理</td></tr>
-            <tr><td><strong>A — Agent</strong></td><td>代理執行</td><td>目標拆解、工具、工作流、觸發、記憶、人工審核</td><td>B2B 開發、客戶研究、追蹤、流程自動化</td></tr>
-            <tr><td><strong>L — Leverage</strong></td><td>商業槓桿</td><td>個人、流程、決策、商業模式槓桿</td><td>效率提升、資源配置、決策支援、服務重設計</td></tr>
+            <tr>
+              <td>G — Generation</td>
+              <td>生成內容</td>
+              <td>開發信、產品資料、市場研究、跨文化溝通</td>
+            </tr>
+            <tr>
+              <td>O — Office + AI</td>
+              <td>辦公協作</td>
+              <td>報表分析、合約閱讀、簡報、交易資料整理</td>
+            </tr>
+            <tr>
+              <td>A — Agent</td>
+              <td>代理執行</td>
+              <td>B2B 開發、客戶研究、追蹤、流程自動化</td>
+            </tr>
+            <tr>
+              <td>L — Leverage</td>
+              <td>商業槓桿</td>
+              <td>效率提升、資源配置、決策支援、服務重設計</td>
+            </tr>
           </tbody>
         </table>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <h2>GOAL 四個主題</h2>
-      <div class="grid">
-        <article class="card">
-          <div class="tag">G · Generation</div>
-          <h3>✍️ 生成內容</h3>
-          <p><strong>定位：內容能力。</strong>從生成式 AI 與 Prompt 基礎開始，把國際商務需求轉化為可修改、可查證、可交付的文字、研究、翻譯與多模態內容。</p>
+      <section>
+        <h2>Modules</h2>
+
+        <article class="module">
+          <div class="meta">G — Generation</div>
+          <h3>生成內容</h3>
+          <h4>內容能力</h4>
+          <p>從生成式 AI 與 Prompt 基礎開始，把國際商務需求轉化為可修改、可查證、可交付的文字、研究、翻譯與多模態內容。</p>
           <ul>
-            <li>Prompt 結構、Zero-shot、Few-shot 與迭代式 Prompt</li>
-            <li>商務 Email、提案、產品說明、FAQ、SOP、報告初稿</li>
-            <li>多語翻譯、跨文化語氣、市場在地化</li>
-            <li>研究、摘要、比較、來源查證與幻覺辨識</li>
+            <li>Prompt 結構：角色、任務、背景、限制、資料與輸出格式</li>
+            <li>Zero-shot、Few-shot、範例導向與迭代式 Prompt</li>
+            <li>商務 Email、提案、產品說明、FAQ、SOP 與報告初稿</li>
+            <li>多語翻譯、跨文化語氣與市場在地化</li>
+            <li>市場／競爭者研究、摘要、比較與來源查證</li>
+            <li>Hallucination（幻覺）辨識、引用與人工查證</li>
           </ul>
-          <div class="practice"><strong>國際商務實作：</strong>將台灣產品資料轉換為英文產品介紹、海外經銷商開發信、FAQ，以及不同國家市場版本。</div>
-          <div class="outcome">學習成果：能定義需求、提供背景、要求格式、反覆修正並驗證結果。</div>
+          <div class="practice">
+            <strong>國際商務實作</strong>
+            將一份台灣產品資料轉換為英文產品介紹、海外經銷商開發信、FAQ，以及針對不同國家市場調整的行銷版本。
+          </div>
+          <div class="outcome">
+            <strong>學習成果</strong>
+            不只會「叫 AI 寫」，而是能定義需求、提供背景、要求格式、反覆修正並驗證結果。
+          </div>
         </article>
 
-        <article class="card">
-          <div class="tag">O · Office + AI</div>
-          <h3>💼 AI 工作協作</h3>
-          <p><strong>定位：工作能力。</strong>把 AI 嵌入文件、資料、簡報、Email、會議與知識管理，形成可重複、可交付的工作流程。</p>
+        <article class="module">
+          <div class="meta">O — Office + AI</div>
+          <h3>AI 工作協作</h3>
+          <h4>工作能力</h4>
+          <p>從單次生成進一步把 AI 嵌入文件、資料、簡報、Email、會議與知識管理，形成可重複、可交付的工作流程。</p>
           <ul>
-            <li>Word／文件：摘要、改寫、版本比較、合約與 PDF 重點萃取</li>
-            <li>Excel／資料：公式、資料清理、分類、異常檢查、趨勢分析</li>
-            <li>PowerPoint／簡報：架構、資料敘事、圖表與管理結論</li>
-            <li>Email／會議與知識管理：摘要、Action Items、內部檔案查詢</li>
+            <li>Word／文件：摘要、改寫、校對、Executive Summary、版本比較、合約與 PDF 重點萃取</li>
+            <li>Excel／資料：公式、資料清理、分類、異常檢查、樞紐分析、趨勢與基本預測</li>
+            <li>PowerPoint／簡報：從報告到架構、資料敘事、一頁一重點、圖表與管理結論</li>
+            <li>Email／會議：大量郵件摘要、回覆草稿、會議決議、Action Items 與追蹤</li>
+            <li>知識管理：從多份內部檔案查詢資訊並保留來源</li>
           </ul>
-          <div class="practice"><strong>國際商務實作：</strong>輸入出口交易資料，由 AI 協助整理 Excel、找出異常與趨勢，再轉為主管簡報與會議摘要。</div>
-          <div class="outcome">學習成果：從單點工具使用提升到整段工作流程重新設計。</div>
+          <div class="practice">
+            <strong>國際商務實作</strong>
+            輸入一批出口交易資料，由 AI 協助整理 Excel、找出異常與趨勢、建立圖表，再轉為主管簡報與會議摘要。
+          </div>
+          <div class="outcome">
+            <strong>學習成果</strong>
+            從「AI 幫我做一件事」提升到「重新設計整段工作流程」。
+          </div>
         </article>
 
-        <article class="card">
-          <div class="tag">A · Agent</div>
-          <h3>🤖 AI 代理執行</h3>
-          <p><strong>定位：執行能力。</strong>理解 Chatbot、Copilot、Workflow 與 Agent 的差異，並設計 AI 依目標進行多步驟工作的代理流程。</p>
+        <article class="module">
+          <div class="meta">A — Agent</div>
+          <h3>AI 代理執行</h3>
+          <h4>執行能力</h4>
+          <p>理解 Chatbot、Copilot、Workflow 與 Agent 的差異，並設計 AI 依目標進行多步驟工作的基本代理流程。</p>
           <p><strong>基本循環：</strong>理解目標 → 規劃 → 執行 → 檢查 → 回報／升級人工處理</p>
           <ul>
-            <li>Goal、Tools / Actions、Memory、Workflow、Trigger</li>
-            <li>Human-in-the-loop、人工批准、例外處理與最終責任</li>
+            <li>Goal：任務目標與成功條件</li>
+            <li>Tools / Actions：搜尋、文件、Email、資料庫、API 等工具</li>
+            <li>Memory、Workflow、Trigger</li>
+            <li>Human-in-the-loop：人工批准、例外處理與最終責任</li>
             <li>B2B 潛在客戶研究、海外市場情報、Email Follow-up</li>
-            <li>最低必要權限、敏感資料、日誌、可追溯性與錯誤回復</li>
           </ul>
-          <div class="practice"><strong>國際商務實作：</strong>設計 B2B Overseas Sales Agent：搜尋潛在客戶 → 背景調查 → 評分 → 開發信 → Follow-up 清單 → 人工確認。</div>
-          <div class="outcome">學習成果：知道什麼適合交給 Agent，什麼必須由人決策。</div>
-        </article>
-
-        <article class="card">
-          <div class="tag">L · Leverage</div>
-          <h3>🚀 AI 商業槓桿</h3>
-          <p><strong>定位：商業放大能力。</strong>從工具操作提升到價值設計，判斷 AI 最值得投入的位置，並衡量槓桿效果。</p>
-          <div class="lever-grid">
-            <div class="mini"><strong>Personal</strong><br>個人槓桿</div>
-            <div class="mini"><strong>Process</strong><br>流程槓桿</div>
-            <div class="mini"><strong>Decision</strong><br>決策槓桿</div>
-            <div class="mini"><strong>Business Model</strong><br>商業模式槓桿</div>
+          <div class="practice">
+            <strong>國際商務實作</strong>
+            設計 B2B Overseas Sales Agent：搜尋潛在客戶 → 公司背景調查 → 客戶評分 → 產生開發信 → 建立 Follow-up 清單 → 人工確認。
           </div>
-          <p>效益可從 Time Saved、Cost Saved、Error Reduction、Response Speed，以及營收、轉換率與客戶價值等 KPI 衡量。</p>
-          <div class="practice"><strong>國際商務實作：</strong>完成 AI Leverage Canvas：問題 → 現行流程 → AI 可介入點 → 人機分工 → 風險 → KPI → 預期效益 → 導入計畫。</div>
-          <div class="outcome">學習成果：不以「用了多少 AI」衡量成功，而以流程、決策、成本、速度與可持續商業價值判斷。</div>
+          <div class="outcome">
+            <strong>學習成果</strong>
+            知道什麼適合交給 Agent，什麼必須由人決策。
+          </div>
         </article>
-      </div>
-    </section>
-  </main>
 
-  <footer>
-    <div class="wrap">內容依據 Notion「GOAL｜國際商務 AI 應用」及其 G／O／A／L 四個主題頁整理。此為 eTrade 第一版靜態網頁。</div>
-  </footer>
+        <article class="module">
+          <div class="meta">L — Leverage</div>
+          <h3>AI 商業槓桿</h3>
+          <h4>商業放大能力</h4>
+          <p>從工具操作提升到價值設計，判斷 AI 最值得投入的位置，並從個人、流程、決策與商業模式四個層次衡量槓桿效果。</p>
+          <ul>
+            <li>Personal Leverage｜個人槓桿</li>
+            <li>Process Leverage｜流程槓桿</li>
+            <li>Decision Leverage｜決策槓桿</li>
+            <li>Business Model Leverage｜商業模式槓桿</li>
+          </ul>
+          <p>KPI 可涵蓋 Time Saved、Cost Saved、Error Reduction、Response Speed，以及營收、轉換率與客戶價值等結果指標。</p>
+          <div class="practice">
+            <strong>國際商務實作</strong>
+            完成 AI Leverage Canvas：問題 → 現行流程 → AI 可介入點 → 人機分工 → 風險 → KPI → 預期效益 → 導入計畫。
+          </div>
+          <div class="outcome">
+            <strong>學習成果</strong>
+            不以「用了多少 AI」衡量成功，而以流程、決策、成本、速度與可持續商業價值判斷。
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer id="contact">
+      <p>eTrade · International Business AI Learning</p>
+      <p class="small">第一版極簡測試版。內容整理自 Notion「GOAL｜國際商務 AI 應用」。</p>
+    </footer>
+  </div>
 </body>
 </html>
