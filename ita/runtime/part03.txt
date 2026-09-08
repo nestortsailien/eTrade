@@ -1,0 +1,230 @@
+an class="tag">Market insight</span>
+        <span class="asset__body">
+          <span class="asset__title">As Microsoft Exchange 2016 and 2019 sunset, how can privacy-conscious organisations future-proof their email?</span>
+          <span class="asset__desc">Published three months before the deadline, making the case on licence cost and data ownership rather than features. Ran outside owned channels on purpose, to reach people who weren&rsquo;t looking for us yet.</span>
+        </span>
+        <span class="asset__meta">Yahoo Finance &#8599;</span>
+      </a>
+      <a class="asset" href="https://www.youtube.com/watch?v=ipVQyShPvo4" target="_blank" rel="noopener">
+        <span class="tag">Enablement</span>
+        <span class="asset__body">
+          <span class="asset__title">Build an on-prem mail server with Synology MailPlus</span>
+          <span class="asset__desc">Technical training for the channel partners handling migrations, run ahead of the end-user push.</span>
+        </span>
+        <span class="asset__meta">Video &#9656;</span>
+      </a>
+      <a class="asset" href="https://www.youtube.com/watch?v=wK0b44nddHA" target="_blank" rel="noopener">
+        <span class="tag">Demand gen</span>
+        <span class="asset__body">
+          <span class="asset__title">MailPlus end-user webinar</span>
+          <span class="asset__desc">A live session for the teams actually doing the migration: what to expect, and how to move without losing anything.</span>
+        </span>
+        <span class="asset__meta">Webinar &#9656;</span>
+      </a>
+      <a class="asset" href="https://youtu.be/3XGTSb3D3TA" target="_blank" rel="noopener">
+        <span class="tag">Product education</span>
+        <span class="asset__body">
+          <span class="asset__title">Synology MailPlus</span>
+          <span class="asset__desc">A short introduction for everyone arriving from the campaign who had never heard of the product.</span>
+        </span>
+        <span class="asset__meta">Video &#9656;</span>
+      </a>
+      <a class="asset" href="https://www.synology.com/en-global/dsm/feature/mailplus" target="_blank" rel="noopener">
+        <span class="tag">Product education</span>
+        <span class="asset__body">
+          <span class="asset__title">Synology MailPlus feature page</span>
+          <span class="asset__desc">Where the whole campaign pointed. Wrote the page and shaped how it&rsquo;s structured.</span>
+        </span>
+        <span class="asset__meta">Product page &#8599;</span>
+      </a>
+      <a class="asset" href="https://community.synology.com/enu/forum/1/post/187326" target="_blank" rel="noopener">
+        <span class="tag">Beta program</span>
+        <span class="asset__body">
+          <span class="asset__title">MailPlus mobile beta</span>
+          <span class="asset__desc">Inviting users to try Calendar on mobile before release, and tell us what broke.</span>
+        </span>
+        <span class="asset__meta">Community &#8599;</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ================= 04 DRIVE ================= -->
+  <section class="band band-edge">
+    <div class="section product wrap reveal" id="drive">
+      <p class="product__step"><b>04</b> / 05 &nbsp;&middot;&nbsp; GTM campaign</p>
+      <h2>Synology Drive</h2>
+      <p class="product__sub">Built a go-to-market campaign around each release, from community beta to customer success stories for sales.</p>
+
+      <figure class="shot video" data-yt="PG--Ge7tYfg">
+        <button class="video__play" type="button" aria-label="Play: Synology Drive API walkthrough">
+          <img src="https://i.ytimg.com/vi/PG--Ge7tYfg/maxresdefault.jpg" alt="Synology Drive API walkthrough video" loading="lazy" onerror="this.src='https://i.ytimg.com/vi/PG--Ge7tYfg/hqdefault.jpg'">
+          <span class="video__btn" aria-hidden="true"></span>
+        </button>
+      </figure>
+
+      <div class="assets">
+        <a class="asset" href="https://community.synology.com/enu/forum/1/post/194333" target="_blank" rel="noopener">
+          <span class="tag">Beta program</span>
+          <span class="asset__body">
+            <span class="asset__title">Drive 4.0 beta launch</span>
+            <span class="asset__desc">Announcing file locking, shared labels and file request. Written to get people to sign up and test, not just to inform.</span>
+          </span>
+          <span class="asset__meta">Community &#8599;</span>
+        </a>
+        <a class="asset" href="https://community.synology.com/enu/forum/1/post/188078" target="_blank" rel="noopener">
+          <span class="tag">Beta program</span>
+          <span class="asset__body">
+            <span class="asset__title">Drive mobile app beta</span>
+            <span class="asset__desc">A rebuilt sync screen and faster scanning, explained through the annoyances they fix.</span>
+          </span>
+          <span class="asset__meta">Community &#8599;</span>
+        </a>
+        <a class="asset" href="https://blog.synology.com/unlimited-cloud-storage-plans-are-becoming-extinct-how-can-synology-drive-help-enterprises-in-cost-control-and-data-ownership/" target="_blank" rel="noopener">
+          <span class="tag">Market insight</span>
+          <span class="asset__body">
+            <span class="asset__title">Unlimited cloud storage plans are becoming extinct</span>
+            <span class="asset__desc">Written when the major cloud providers started pulling their unlimited plans. Thought leadership built on watching the market, not a feature list.</span>
+          </span>
+          <span class="asset__meta">Blog &#8599;</span>
+        </a>
+        <a class="asset" href="https://www.youtube.com/watch?v=PG--Ge7tYfg" target="_blank" rel="noopener">
+          <span class="tag">Technical education</span>
+          <span class="asset__body">
+            <span class="asset__title">Drive API walkthrough</span>
+            <span class="asset__desc">Sitting down on camera to walk developers through the API.</span>
+          </span>
+          <span class="asset__meta">Video &#9656;</span>
+        </a>
+        <a class="asset" href="https://www.youtube.com/watch?v=ACmH_OBRdWU" target="_blank" rel="noopener">
+          <span class="tag">Technical education</span>
+          <span class="asset__body">
+            <span class="asset__title">Drive mobile app</span>
+            <span class="asset__desc">How syncing and scanning documents works on your phone.</span>
+          </span>
+          <span class="asset__meta">Video &#9656;</span>
+        </a>
+        <a class="asset" href="https://www.synology.com/en-global/dsm/feature/drive" target="_blank" rel="noopener">
+          <span class="tag">Product education</span>
+          <span class="asset__body">
+            <span class="asset__title">Synology Drive feature page</span>
+            <span class="asset__desc">Wrote the page and shaped how it&rsquo;s structured.</span>
+          </span>
+          <span class="asset__meta">Product page &#8599;</span>
+        </a>
+        <a class="asset" href="https://www.synology.com/en-global/company/case_study/GCC_HudaBeauty" target="_blank" rel="noopener">
+          <span class="tag">Customer reference</span>
+          <span class="asset__body">
+            <span class="asset__title">Huda Beauty</span>
+            <span class="asset__desc">How a global beauty brand set it up. Sales enablement written so the team could hand it to the next customer asking the same questions.</span>
+          </span>
+          <span class="asset__meta">Case study &#8599;</span>
+        </a>
+        <a class="asset" href="https://www.synology.com/es-es/company/case_study/Tribunal_Constitucional" target="_blank" rel="noopener">
+          <span class="tag">Customer reference</span>
+          <span class="asset__body">
+            <span class="asset__title">Tribunal Constitucional de Espa&ntilde;a</span>
+            <span class="asset__desc">Backup and retention for a national court system, localized for the Spanish-speaking market.</span>
+          </span>
+          <span class="asset__meta">Case study &middot; ES &#8599;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 05 EVENTS ================= -->
+  <section class="section product wrap reveal" id="events">
+    <p class="product__step"><b>05</b> / 05 &nbsp;&middot;&nbsp; Events &amp; announcements</p>
+    <h2>On-site events</h2>
+    <p class="product__sub">Planned on-site events across departments: booth strategy, product storytelling, promotional materials and live demo environments.</p>
+
+    <figure class="shot video" data-yt="VDm0kw07X4I">
+      <button class="video__play" type="button" aria-label="Play: COMPUTEX press event and live demo">
+        <img src="https://i.ytimg.com/vi/VDm0kw07X4I/maxresdefault.jpg" alt="COMPUTEX press event and live demo video" loading="lazy" onerror="this.src='https://i.ytimg.com/vi/VDm0kw07X4I/hqdefault.jpg'">
+        <span class="video__btn" aria-hidden="true"></span>
+      </button>
+    </figure>
+
+    <div class="assets">
+      <a class="asset" href="https://www.youtube.com/watch?v=VDm0kw07X4I" target="_blank" rel="noopener">
+        <span class="tag">Launch event</span>
+        <span class="asset__body">
+          <span class="asset__title">COMPUTEX press event &amp; live demo</span>
+          <span class="asset__desc">The press-day presentation and live demo, on stage in front of international media.</span>
+        </span>
+        <span class="asset__meta">Video &#9656;</span>
+      </a>
+      <a class="asset" href="https://www.youtube.com/watch?v=0_Mh1bHZ_sw" target="_blank" rel="noopener">
+        <span class="tag">Launch event</span>
+        <span class="asset__body">
+          <span class="asset__title">COMPUTEX overview</span>
+          <span class="asset__desc">A walk through the whole booth and product line-up.</span>
+        </span>
+        <span class="asset__meta">Video &#9656;</span>
+      </a>
+      <a class="asset" href="https://www.synology.com/en-global/company/news/article/BeeDrive" target="_blank" rel="noopener">
+        <span class="tag">Launch PR</span>
+        <span class="asset__body">
+          <span class="asset__title">BeeDrive</span>
+          <span class="asset__desc">A separate launch, not part of the show. An entirely new product in a category with nothing to compare it to, so it launched on the problem it solves.</span>
+        </span>
+        <span class="asset__meta">Press release &#8599;</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ================= COOLBITX ================= -->
+  <section class="section product wrap reveal" id="coolwallet">
+    <p class="product__step">Earlier role &nbsp;&middot;&nbsp; Social media marketing</p>
+    <h2>CoolBitX &middot; CoolWallet</h2>
+    <p class="product__sub">Ran social media for a crypto hardware wallet: community channels, campaigns, and a sponsored integration with one of Taiwan&rsquo;s biggest creators.</p>
+
+    <figure class="shot video product__shot" data-yt="IBA3k7GBsWc">
+      <button class="video__play" type="button" aria-label="Play: Joeman crypto documentary, sponsored by CoolBitX">
+        <img src="https://i.ytimg.com/vi/IBA3k7GBsWc/maxresdefault.jpg" alt="Joeman crypto documentary sponsored by CoolBitX" loading="lazy" onerror="this.src='https://i.ytimg.com/vi/IBA3k7GBsWc/hqdefault.jpg'">
+        <span class="video__btn" aria-hidden="true"></span>
+      </button>
+    </figure>
+
+    <div class="assets">
+      <a class="asset" href="https://www.youtube.com/watch?v=IBA3k7GBsWc" target="_blank" rel="noopener">
+        <span class="tag">Influencer</span>
+        <span class="asset__body">
+          <span class="asset__title">Joeman &times; CoolWallet</span>
+          <span class="asset__desc">A sponsored integration in the cryptocurrency documentary of one of Taiwan&rsquo;s biggest YouTubers, putting the product in front of a mainstream audience rather than a crypto-native one.</span>
+        </span>
+        <span class="asset__meta">Video &#9656;</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ================= OTHER CREATIVE WORK ================= -->
+  <section class="band band-edge">
+    <div class="section appendix wrap reveal" id="creative">
+      <h2>Other creative work</h2>
+      <p class="lede">Alongside the product marketing work: side projects and creative practice built on content creation, video production and journalism.</p>
+
+      <div class="appendix__group">
+        <h3 class="appendix__label">Content creation</h3>
+        <div class="appendix__grid">
+        <article>
+          <figure class="shot video" data-yt="AmosZxePEZo">
+            <button class="video__play" type="button" aria-label="Play: Chino Capuchino">
+              <img src="https://i.ytimg.com/vi/AmosZxePEZo/maxresdefault.jpg" alt="Chino Capuchino" loading="lazy" onerror="this.src='https://i.ytimg.com/vi/AmosZxePEZo/hqdefault.jpg'">
+              <span class="video__btn" aria-hidden="true"></span>
+            </button>
+          </figure>
+          <span class="yr">2020 &middot; Documentary</span>
+          <h3>Chino Capuchino</h3>
+          <p>Documentary on the East Asian diaspora in Spain: cultural identity, belonging and racism, told through the people living it.</p>
+        </article>
+        <article>
+          <figure class="shot video video--fb" data-fb="https://www.facebook.com/ChiTribEspanol/videos/10156409888016153/">
+            <button class="video__play" type="button" aria-label="Play: Comidita con Ita">
+              <span class="video__btn" aria-hidden="true"></span>
+            </button>
+          </figure>
+          <span class="yr">2018 &middot; Original series</span>
+          <h3>Comidita con Ita</h3>
+          <p>A food and culture series pitched, produced and hosted solo. Mofongo, ceviche, and what people will tell you about home once you put a plate in front of them.</p>
+          <p class="epis">
+            <a href="https://www.facebook.com/watch/?v=10156391002546153" target="_blank" r
