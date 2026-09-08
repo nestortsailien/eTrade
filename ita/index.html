@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ita Tsai</title>
+<style>html,body{margin:0;background:#F4F2EC;color:#1A1C20;font-family:Arial,sans-serif}.loading{min-height:100vh;display:grid;place-items:center;font-size:14px;letter-spacing:.08em;text-transform:uppercase}</style>
+</head>
+<body>
+<div class="loading">Loading Ita Tsai portfolio…</div>
+<script>
+(async function(){
+  try{
+    const files=['runtime/part01.txt','runtime/part02.txt','runtime/part03.txt','runtime/part04.txt'];
+    let html='';
+    for(const file of files){
+      const r=await fetch(file,{cache:'no-store'});
+      if(!r.ok) throw new Error(file+' '+r.status);
+      html+=await r.text();
+    }
+    document.open();
+    document.write(html);
+    document.close();
+  }catch(err){
+    document.body.innerHTML='<div class="loading">Unable to load portfolio.</div>';
+    console.error(err);
+  }
+})();
+</script>
+</body>
+</html>
