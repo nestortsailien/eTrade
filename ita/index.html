@@ -19,29 +19,20 @@
       html+=await r.text();
     }
 
-    let portrait='';
-    for(const file of ['runtime/portrait01.txt','runtime/portrait02.txt']){
-      const r=await fetch(file,{cache:'no-store'});
-      if(!r.ok) throw new Error(file+' '+r.status);
-      portrait+=await r.text();
-    }
-    portrait=portrait.replace(/\s+/g,'');
-
+    // Use the real uploaded JPG directly from the repository.
     html=html.replace(
       /<img src="https:\/\/placehold\.co\/1200x800\/F4F2EC\/1F3D6B\?text=Ita\+Tsai" alt="Ita Tsai" width="683" height="1024">/,
-      '<img src="data:image/jpeg;base64,'+portrait+'" alt="Ita Tsai" width="683" height="1024">'
+      '<img src="images/foto.jpg" alt="Ita Tsai" width="683" height="1024">'
     );
     html=html.replace(
       '<div><span>5</span><p>Products taken to market</p></div>',
       '<div><span>7</span><p>Products taken to market</p></div>'
     );
 
-    // Keep the portrait at its natural aspect ratio and prevent the card
-    // from reserving extra height below the image. This removes the grey bar.
-    // On desktop, keep it near native pixel density to avoid visible upscaling.
+    // Keep the portrait at its true aspect ratio and avoid browser stretching.
     html=html.replace(
       '</style>',
-      '.hero__portrait{height:auto!important;min-height:0!important;aspect-ratio:auto!important;background:transparent!important}.hero__portrait img{display:block!important;width:100%!important;height:auto!important;min-height:0!important;aspect-ratio:auto!important;object-fit:contain!important}.hero__media{align-self:start!important}@media (min-width:900px){.hero__media{display:flex;justify-content:flex-end}.hero__portrait{width:min(100%,390px)!important}}\n</style>'
+      '.hero__portrait{height:auto!important}.hero__portrait img{display:block;width:100%;height:auto!important;object-fit:contain!important}@media (min-width:900px){.hero__media{display:flex;justify-content:flex-end}.hero__portrait{width:min(100%,390px);height:auto!important}}\n</style>'
     );
 
     document.open();
