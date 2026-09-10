@@ -19,17 +19,15 @@
       html+=await r.text();
     }
 
-    // Use the uploaded JPG directly from the repository.
     html=html.replace(
       /<img src="https:\/\/placehold\.co\/1200x800\/F4F2EC\/1F3D6B\?text=Ita\+Tsai" alt="Ita Tsai" width="683" height="1024">/,
-      '<img src="images/itafoto.jpg" alt="Ita Tsai" width="683" height="1024">'
+      '<img src="/eTrade/ita/images/itafoto.jpg" alt="Ita Tsai" width="683" height="1024">'
     );
     html=html.replace(
       '<div><span>5</span><p>Products taken to market</p></div>',
       '<div><span>7</span><p>Products taken to market</p></div>'
     );
 
-    // Keep the portrait at its true aspect ratio and avoid browser stretching.
     html=html.replace(
       '</style>',
       '.hero__portrait{height:auto!important}.hero__portrait img{display:block;width:100%;height:auto!important;object-fit:contain!important}@media (min-width:900px){.hero__media{display:flex;justify-content:flex-end}.hero__portrait{width:min(100%,390px);height:auto!important}}\n</style>'
