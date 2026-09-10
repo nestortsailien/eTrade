@@ -19,7 +19,6 @@
       html+=await r.text();
     }
 
-    // Load the portrait in two small chunks so GitHub Pages can serve it locally.
     let portrait='';
     for(const file of ['runtime/portrait01.txt','runtime/portrait02.txt']){
       const r=await fetch(file,{cache:'no-store'});
@@ -28,7 +27,6 @@
     }
     portrait=portrait.replace(/\s+/g,'');
 
-    // Apply the latest homepage updates before rendering.
     html=html.replace(
       /<img src="https:\/\/placehold\.co\/1200x800\/F4F2EC\/1F3D6B\?text=Ita\+Tsai" alt="Ita Tsai" width="683" height="1024">/,
       '<img src="data:image/jpeg;base64,'+portrait+'" alt="Ita Tsai" width="683" height="1024">'
@@ -38,11 +36,12 @@
       '<div><span>7</span><p>Products taken to market</p></div>'
     );
 
-    // Keep the portrait closer to its native pixel density on larger screens.
-    // This reduces browser upscaling and makes the existing source look noticeably sharper.
+    // Keep the portrait at its natural aspect ratio and prevent the card
+    // from reserving extra height below the image. This removes the grey bar.
+    // On desktop, keep it near native pixel density to avoid visible upscaling.
     html=html.replace(
       '</style>',
-      '@media (min-width:900px){.hero__media{display:flex;justify-content:flex-end}.hero__portrait{width:min(100%,350px)}}\n</style>'
+      '.hero__portrait{height:auto!important;min-height:0!important;aspect-ratio:auto!important;background:transparent!important}.hero__portrait img{display:block!important;width:100%!important;height:auto!important;min-height:0!important;aspect-ratio:auto!important;object-fit:contain!important}.hero__media{align-self:start!important}@media (min-width:900px){.hero__media{display:flex;justify-content:flex-end}.hero__portrait{width:min(100%,390px)!important}}\n</style>'
     );
 
     document.open();
