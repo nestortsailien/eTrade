@@ -31,6 +31,11 @@
       '<div><span>5</span><p>Products taken to market</p></div>',
       '<div><span>7</span><p>Products taken to market</p></div>'
     );
+    html=html.replace(
+      '<div class="pills">\n          <span>Product Positioning</span>\n          <span>Go-to-Market</span>\n          <span>Campaign Execution</span>\n          <span>Content &amp; Video</span>\n        </div>',
+      '<div class="pills">\n          <a href="#office-suite">Product Positioning</a>\n          <a href="#drive">Go-to-Market</a>\n          <a href="#events">Campaign Execution</a>\n          <a href="#creative">Content &amp; Video</a>\n        </div>'
+    );
+    html=html.replace('.pills span {', '.pills a {');
 
     html=html.replace(
       '</style>',
