@@ -19,10 +19,10 @@
       html+=await r.text();
     }
 
-    // Use the real uploaded JPG directly from the repository.
+    // Use the uploaded JPG directly from the repository.
     html=html.replace(
       /<img src="https:\/\/placehold\.co\/1200x800\/F4F2EC\/1F3D6B\?text=Ita\+Tsai" alt="Ita Tsai" width="683" height="1024">/,
-      '<img src="images/foto.jpg" alt="Ita Tsai" width="683" height="1024">'
+      '<img src="images/itafoto.jpg" alt="Ita Tsai" width="683" height="1024">'
     );
     html=html.replace(
       '<div><span>5</span><p>Products taken to market</p></div>',
