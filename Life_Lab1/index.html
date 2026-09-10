@@ -6,63 +6,37 @@
 <title>Life Lab</title>
 <meta name="description" content="Life Lab — 15 visual lessons for thinking through career, work, stability, success, learning and life choices.">
 <style>
-:root{
-  --bg:#f3f7f6;
-  --paper:#fffefb;
-  --ink:#17313f;
-  --muted:#64777f;
-  --teal:#1f8a82;
-  --teal2:#54b9ae;
-  --blue:#164f73;
-  --line:#dbe7e5;
-}
+:root{--bg:#f5f7fa;--ink:#18313f;--muted:#65747d;--paper:#fff;--line:#dde5ea}
 *{box-sizing:border-box}
-body{margin:0;font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;color:var(--ink);background:
-radial-gradient(circle at 10% 10%,rgba(84,185,174,.14),transparent 26%),
-radial-gradient(circle at 90% 90%,rgba(22,79,115,.12),transparent 28%),
-var(--bg)}
+body{margin:0;font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;color:var(--ink);background:linear-gradient(180deg,#f7fafc 0%,#eef4f6 100%)}
 a{color:inherit}
-.shell{width:min(1180px,calc(100% - 32px));margin:auto;padding:34px 0 56px}
-.hero{display:grid;grid-template-columns:1.05fr .95fr;overflow:hidden;border:1px solid var(--line);border-radius:30px;background:rgba(255,254,251,.96);box-shadow:0 26px 70px rgba(22,79,115,.13)}
-.copy{padding:64px 58px 52px}
-.badge{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:800;letter-spacing:.11em;text-transform:uppercase;color:var(--teal)}
-.badge:before{content:"🧪";font-size:20px;letter-spacing:0}
-h1{font-size:clamp(44px,7vw,78px);line-height:.96;letter-spacing:-.05em;margin:24px 0 20px}
-.sub{font-size:21px;line-height:1.62;color:#405c66;max-width:650px;margin:0 0 32px}
-.cta{display:inline-flex;text-decoration:none;background:linear-gradient(135deg,var(--blue),var(--teal));color:#fff;font-weight:800;padding:15px 21px;border-radius:14px;box-shadow:0 12px 26px rgba(22,79,115,.18);transition:.2s}
-.cta:hover{transform:translateY(-2px)}
-.meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}.pill{padding:8px 11px;border-radius:999px;background:#eef7f5;border:1px solid #d7e9e6;font-size:13px;font-weight:700;color:#4b666e}
-.visual{position:relative;background:linear-gradient(160deg,#123f5a,#176e70 55%,#2aa29a);min-height:540px;padding:42px;display:flex;align-items:center;justify-content:center;overflow:hidden}
-.visual:before,.visual:after{content:"";position:absolute;border-radius:50%;border:1px solid rgba(255,255,255,.18)}.visual:before{width:420px;height:420px;right:-140px;top:-110px}.visual:after{width:300px;height:300px;left:-120px;bottom:-90px}
-.card{position:relative;z-index:2;width:min(390px,100%);padding:30px;border:1px solid rgba(255,255,255,.24);border-radius:26px;background:rgba(255,255,255,.10);backdrop-filter:blur(8px);color:white;box-shadow:0 24px 50px rgba(0,0,0,.18)}
-.card .num{font-size:82px;font-weight:900;line-height:.95;letter-spacing:-.06em}.card h2{font-size:28px;line-height:1.15;margin:16px 0 10px}.card p{margin:0;color:rgba(255,255,255,.86);line-height:1.6}
-.topics{margin-top:28px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.topic{display:block;text-decoration:none;background:rgba(255,254,251,.94);border:1px solid var(--line);border-radius:18px;padding:18px 18px 17px;transition:.18s;box-shadow:0 8px 24px rgba(22,79,115,.06)}.topic:hover{transform:translateY(-2px);box-shadow:0 14px 28px rgba(22,79,115,.10)}
-.topic .n{font-size:12px;font-weight:900;letter-spacing:.1em;color:var(--teal);text-transform:uppercase}.topic h3{font-size:16px;line-height:1.38;margin:8px 0 0}.footer{margin-top:24px;text-align:center;color:var(--muted);font-size:13px}
-@media(max-width:900px){.hero{grid-template-columns:1fr}.copy{padding:44px 28px 36px}.visual{min-height:360px}.topics{grid-template-columns:1fr 1fr}}
-@media(max-width:600px){.shell{width:min(100% - 20px,1180px);padding-top:16px}.hero{border-radius:22px}.topics{grid-template-columns:1fr}.visual{padding:28px}.card{padding:24px}.sub{font-size:18px}}
+.shell{width:min(1220px,calc(100% - 28px));margin:auto;padding:18px 0 54px}
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:14px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:-.02em}.brand .icon{font-size:26px}.brand span:last-child{font-size:20px}
+.notion-link{font-size:13px;font-weight:800;text-decoration:none;color:#42616d;background:#fff;border:1px solid var(--line);padding:9px 12px;border-radius:999px}
+.topics{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:11px;margin-bottom:22px}
+.topic{min-height:116px;border-radius:18px;padding:16px 15px;text-decoration:none;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 8px 22px rgba(31,55,70,.09);transition:.18s ease;border:1px solid rgba(255,255,255,.55)}
+.topic:hover{transform:translateY(-3px);box-shadow:0 14px 28px rgba(31,55,70,.14)}
+.topic .n{font-size:13px;font-weight:900;letter-spacing:.12em;opacity:.74}
+.topic h3{font-size:15px;line-height:1.28;margin:10px 0 0;font-weight:850;letter-spacing:-.015em}
+.topic:nth-child(1){background:#ffd8d8}.topic:nth-child(2){background:#ffe6bd}.topic:nth-child(3){background:#fff0a8}.topic:nth-child(4){background:#d9efb8}.topic:nth-child(5){background:#c8eee0}.topic:nth-child(6){background:#ccecf6}.topic:nth-child(7){background:#d8e3ff}.topic:nth-child(8){background:#e3dbff}.topic:nth-child(9){background:#f0d8ff}.topic:nth-child(10){background:#ffd9ef}.topic:nth-child(11){background:#f7d2c4}.topic:nth-child(12){background:#f4e1b7}.topic:nth-child(13){background:#d5edc8}.topic:nth-child(14){background:#cce8e5}.topic:nth-child(15){background:#d8e2f0}
+.hero{display:grid;grid-template-columns:1.08fr .92fr;overflow:hidden;border:1px solid var(--line);border-radius:28px;background:rgba(255,255,255,.96);box-shadow:0 22px 60px rgba(22,79,115,.11)}
+.copy{padding:52px 54px 46px}.badge{font-size:13px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:#1f8a82}.badge:before{content:"🧪";font-size:20px;margin-right:9px}
+h1{font-size:clamp(46px,7vw,78px);line-height:.95;letter-spacing:-.05em;margin:21px 0 18px}.sub{font-size:20px;line-height:1.6;color:#425d68;margin:0 0 28px;max-width:680px}.cta{display:inline-flex;text-decoration:none;background:linear-gradient(135deg,#164f73,#1f8a82);color:#fff;font-weight:800;padding:14px 20px;border-radius:13px}.visual{background:linear-gradient(150deg,#143f59,#1b7476 58%,#36a69c);min-height:420px;display:flex;align-items:center;justify-content:center;padding:38px}.card{width:min(360px,100%);padding:28px;border-radius:24px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.24);color:#fff;backdrop-filter:blur(8px)}.card .num{font-size:78px;line-height:.95;font-weight:900}.card h2{font-size:27px;margin:14px 0 10px;line-height:1.15}.card p{margin:0;line-height:1.6;color:rgba(255,255,255,.86)}
+.footer{text-align:center;color:var(--muted);font-size:13px;margin-top:20px}
+@media(max-width:1050px){.topics{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:820px){.hero{grid-template-columns:1fr}.copy{padding:40px 28px 34px}.visual{min-height:310px}.topics{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.shell{width:min(100% - 16px,1220px);padding-top:10px}.topbar{margin-bottom:10px}.brand span:last-child{font-size:18px}.notion-link{font-size:12px;padding:8px 10px}.topics{grid-template-columns:1fr 1fr;gap:8px}.topic{min-height:106px;border-radius:15px;padding:13px 12px}.topic h3{font-size:14px}.hero{border-radius:22px}.copy{padding:34px 22px 30px}.sub{font-size:17px}.visual{padding:24px}.card{padding:22px}.card .num{font-size:62px}}
 </style>
 </head>
 <body>
 <div class="shell">
-  <section class="hero">
-    <div class="copy">
-      <div class="badge">Life Lab · English Edition</div>
-      <h1>Life Lab</h1>
-      <p class="sub"><strong>A Logical Visual Guide to Career Dilemmas.</strong><br>Fifteen concise lessons for thinking more clearly about work, stability, success, learning, entrepreneurship, balance, and the choices that shape a life.</p>
-      <a class="cta" href="https://app.notion.com/p/3d765edfe79a81c3b471e07570045029?pvs=204" target="_blank" rel="noopener">Open the full Life Lab →</a>
-      <div class="meta"><span class="pill">15 topics</span><span class="pill">Interactive presentations</span><span class="pill">Career & life design</span></div>
-    </div>
-    <div class="visual">
-      <div class="card">
-        <div class="num">15</div>
-        <h2>Questions worth thinking through.</h2>
-        <p>From “What is the goal of life?” to “What if you chose the wrong major or job?” — one clear question at a time.</p>
-      </div>
-    </div>
-  </section>
+  <div class="topbar">
+    <div class="brand"><span class="icon">🧪</span><span>Life Lab</span></div>
+    <a class="notion-link" href="https://app.notion.com/p/3d765edfe79a81c3b471e07570045029?pvs=204" target="_blank" rel="noopener">Open in Notion ↗</a>
+  </div>
 
-  <section class="topics">
+  <section class="topics" aria-label="Life Lab topics">
     <a class="topic" href="https://app.notion.com/p/20565edfe79a825e8b3c81fe03aa02d0" target="_blank"><div class="n">01</div><h3>What Is the Goal of Life?</h3></a>
     <a class="topic" href="https://app.notion.com/p/9ee65edfe79a83189ecd017b17de176e" target="_blank"><div class="n">02</div><h3>What Does Stability Mean to You?</h3></a>
     <a class="topic" href="https://app.notion.com/p/fbb65edfe79a8341839b015a1ef197c0" target="_blank"><div class="n">03</div><h3>What Does It Mean to Feel Good?</h3></a>
@@ -78,6 +52,18 @@ h1{font-size:clamp(44px,7vw,78px);line-height:.96;letter-spacing:-.05em;margin:2
     <a class="topic" href="https://app.notion.com/p/9e265edfe79a8252badb0169817b5057" target="_blank"><div class="n">13</div><h3>Can You Make a Living from Your Interests?</h3></a>
     <a class="topic" href="https://app.notion.com/p/85f65edfe79a8346b01f81c55d048681" target="_blank"><div class="n">14</div><h3>Is Work-Life Balance Possible?</h3></a>
     <a class="topic" href="https://app.notion.com/p/72a65edfe79a8324a4ea014d0254bdd9" target="_blank"><div class="n">15</div><h3>What If You Chose the Wrong Major or Job?</h3></a>
+  </section>
+
+  <section class="hero">
+    <div class="copy">
+      <div class="badge">Life Lab · English Edition</div>
+      <h1>A Logical Visual Guide to Career Dilemmas</h1>
+      <p class="sub">Fifteen concise lessons for thinking more clearly about work, stability, success, learning, entrepreneurship, balance, and the choices that shape a life.</p>
+      <a class="cta" href="https://app.notion.com/p/3d765edfe79a81c3b471e07570045029?pvs=204" target="_blank" rel="noopener">Open the full Life Lab →</a>
+    </div>
+    <div class="visual">
+      <div class="card"><div class="num">15</div><h2>Questions worth thinking through.</h2><p>Choose any topic above and jump directly into that lesson.</p></div>
+    </div>
   </section>
   <div class="footer">Life Lab · 15 visual lessons on career, choice, and growth</div>
 </div>
