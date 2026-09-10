@@ -38,6 +38,13 @@
       '<div><span>7</span><p>Products taken to market</p></div>'
     );
 
+    // Keep the portrait closer to its native pixel density on larger screens.
+    // This reduces browser upscaling and makes the existing source look noticeably sharper.
+    html=html.replace(
+      '</style>',
+      '@media (min-width:900px){.hero__media{display:flex;justify-content:flex-end}.hero__portrait{width:min(100%,350px)}}\n</style>'
+    );
+
     document.open();
     document.write(html);
     document.close();
