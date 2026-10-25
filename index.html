@@ -101,6 +101,63 @@
       .wrap{width:min(100% - 22px,1100px)}
       .card{padding:20px}
     }
+
+    /* Experimental 2026 youth redesign — original saved in backups/ */
+    :root{
+      --bg:#0a0b18;--surface:#171a2c;--text:#f6f5ff;--muted:#b7b9cd;
+      --line:#41405e;--accent:#bdff47;--accent-soft:#242b28;
+      --shadow:0 18px 50px rgba(0,0,0,.28);
+    }
+    html{scroll-behavior:smooth}
+    body{
+      background:radial-gradient(ellipse at 12% 6%,rgba(145,65,255,.3),transparent 34%),
+      radial-gradient(ellipse at 90% 26%,rgba(0,218,220,.16),transparent 30%),#0a0b18;
+      color:var(--text);
+    }
+    header{padding-top:78px}
+    .eyebrow{background:#bdff47;color:#121424;border:2px solid #121424;
+      border-radius:5px;letter-spacing:.12em;text-transform:uppercase;
+      box-shadow:5px 5px 0 #8c55ff;transform:rotate(-2deg)}
+    h1{font-size:clamp(2.65rem,8.4vw,6.5rem);line-height:1.08;font-weight:950;
+      letter-spacing:-.055em;max-width:900px;text-wrap:balance;
+      text-shadow:4px 5px 0 rgba(125,68,255,.65)}
+    h2{letter-spacing:-.035em;font-weight:900}
+    .lead,.intro{color:#c7c9d9}
+    .grid{gap:20px}
+    .card{
+      border:2px solid #494263;border-radius:22px;
+      background:linear-gradient(145deg,#1d1d36,#11172b);
+      box-shadow:8px 9px 0 rgba(107,72,181,.27);
+    }
+    .card h3{font-size:clamp(1.22rem,2.8vw,1.55rem);line-height:1.42;letter-spacing:-.015em}
+    .card p,.card ul{color:#d0d1df}
+    .card-link:hover{transform:translate(-4px,-5px);border-color:var(--accent);
+      box-shadow:12px 14px 0 rgba(189,255,71,.18)}
+    .card-link:focus-visible{outline:3px solid #bdff47;outline-offset:4px}
+    .tag{color:#bdff47;font-weight:900;letter-spacing:.1em}
+    .open-link{color:#bdff47;font-size:1.03rem}
+    .goal-card{border:2px solid #ab8aff;background:linear-gradient(115deg,#2a1e4d,#152438)}
+    .goal-equation{color:#bdff47!important;font-size:1.05rem}
+    .table-wrap{background:#161b2d;border:2px solid #494263;border-radius:19px}
+    th{background:#2a2147;color:#dcff9b}
+    td,th{border-bottom:1px solid #4d4567}
+    td{color:#e4e4f1}
+    .practice{background:#292449;color:#eddefe;border-left:5px solid #bdff47}
+    .outcome{color:#bdff47}
+    .mini{background:#25213c;border:1px solid #685a97;color:#f1efff}
+    footer{color:#b7b9cd}
+    ::selection{background:#bdff47;color:#111426}
+    @media (max-width:760px){
+      header{padding-top:52px}
+      h1{font-size:clamp(2.7rem,12vw,4.7rem)}
+      .card{padding:23px;border-radius:20px;box-shadow:5px 6px 0 rgba(107,72,181,.25)}
+      .card-link:hover{transform:none}
+      section{padding:24px 0 38px}
+    }
+    @media (prefers-reduced-motion:reduce){
+      html{scroll-behavior:auto}
+      .card-link{transition:none}
+    }
   </style>
 </head>
 <body>
