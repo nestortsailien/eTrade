@@ -48,6 +48,10 @@
     }
     .formula strong{color:var(--accent)}
     .goal-card{margin-top:28px;border-color:#bfdbfe}
+    .resource-links{display:flex;flex-direction:column;align-items:flex-start;gap:10px;margin-top:18px}
+    .resource-links a{display:block;color:var(--accent);font-weight:800;text-decoration:none;border:1px solid #bfdbfe;background:var(--accent-soft);padding:9px 13px;border-radius:10px;max-width:100%}
+    .resource-links a:hover{text-decoration:underline;border-color:var(--accent)}
+    .resource-links a:focus-visible{outline:3px solid #93c5fd;outline-offset:3px}
     .goal-equation{font-weight:700;color:var(--accent)!important;overflow-wrap:anywhere}
     section{padding:28px 0 46px}
     h2{font-size:1.8rem;margin:0 0 16px}
@@ -135,13 +139,17 @@
         <p>從 AI 生成內容、辦公協作、代理執行到商業槓桿，結合人工智慧書籍與實務資源，掌握 AI 如何應用於國際商務。</p>
         <div class="open-link">開啟 AI_Books｜人工智慧書籍 →</div>
       </a>
-      <a class="card card-link goal-card" href="https://app.notion.com/p/3d065edfe79a812faa75e7bd065803fa" target="_blank" rel="noopener noreferrer">
+      <article class="card goal-card">
         <div class="tag">Practical Learning Resource</div>
         <h3>🧭 應用教學｜國際貿易實務與練習</h3>
-        <p>匯集國際貿易重點整理、PPT 電子教材、信用狀與計算題練習，以及 AI 提問與商務談判資源，從核心知識延伸到實務應用。</p>
-        <div class="open-link">開啟 應用教學 →</div>
-      </a>
-      <a class="card card-link goal-card" href="https://app.notion.com/p/3cd65edfe79a8165ab86edab74749f84" target="_blank" rel="noopener noreferrer">
+        <p>從信用狀操作、貿易計算到國際貿易實務簡報，依學習需求直接選擇教材與練習題庫。</p>
+        <nav class="resource-links" aria-label="應用教學資源">
+          <a href="https://app.notion.com/p/40265edfe79a8019b433c0186e670b6b" target="_blank" rel="noopener noreferrer">信用狀｜練習題庫 →</a>
+          <a href="https://app.notion.com/p/3f065edfe79a8157bf69d73560da3e40" target="_blank" rel="noopener noreferrer">計算題｜練習題庫 →</a>
+          <a href="https://app.notion.com/p/3c465edfe79a8120b053df8c3a9a70c2" target="_blank" rel="noopener noreferrer">國際貿易實務｜PPT電子教材 →</a>
+        </nav>
+      </article>
+      <a class="card card-link goal-card" href="https://app.notion.com/p/3d065edfe79a812faa75e7bd065803fa" target="_blank" rel="noopener noreferrer">
         <div class="tag">Knowledge Library · eBooks</div>
         <h3>📚 知識庫｜國際商務與貿易電子書</h3>
         <p>彙整國際商務與國際貿易的電子書資源，方便依主題查找專業知識、延伸閱讀，並作為課程學習與實務研究的參考。</p>
