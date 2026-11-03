@@ -6,6 +6,7 @@ on:
       - 'eTrade.zip'
       - 'ePPT.zip'
       - 'scripts/prepare_android.py'
+      - 'icons/**'
       - '.github/workflows/build-apks.yml'
 jobs:
   build:
@@ -27,6 +28,8 @@ jobs:
       - uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: '8.10.2'
+      - name: Install icon rendering dependency
+        run: python3 -m pip install cairosvg
       - name: Prepare offline Android project
         run: python3 scripts/prepare_android.py ${{ matrix.app }}
       - name: Build APK
