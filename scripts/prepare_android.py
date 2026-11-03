@@ -13,6 +13,7 @@ with zipfile.ZipFile(app+".zip") as z:
         target.parent.mkdir(parents=True,exist_ok=True)
         target.write_bytes(z.read(info))
 (root/"settings.gradle").write_text("pluginManagement { repositories { google(); mavenCentral(); gradlePluginPortal() } }\ndependencyResolutionManagement { repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS); repositories { google(); mavenCentral() } }\nrootProject.name = '"+app+"'\ninclude ':app'\n")
+(root/"gradle.properties").write_text("android.useAndroidX=true\nandroid.enableJetifier=true\n")
 (root/"build.gradle").write_text("plugins { id 'com.android.application' version '8.7.3' apply false }\n")
 (root/"app/build.gradle").write_text("""plugins { id 'com.android.application' }
 android {
