@@ -29,10 +29,14 @@ android {
 }
 dependencies { implementation 'androidx.webkit:webkit:1.12.1' }
 """)
+import cairosvg
+icon_dir=root/"app/src/main/res/drawable-nodpi"
+icon_dir.mkdir(parents=True,exist_ok=True)
+cairosvg.svg2png(url=str(pathlib.Path("icons")/(app+".svg")),write_to=str(icon_dir/"app_icon.png"),output_width=512,output_height=512)
 manifest=root/"app/src/main/AndroidManifest.xml"
 manifest.parent.mkdir(parents=True,exist_ok=True)
 manifest.write_text("""<manifest xmlns:android="http://schemas.android.com/apk/res/android">
-<application android:label='"""+app+"""' android:theme="@android:style/Theme.Material.Light.NoActionBar" android:usesCleartextTraffic="true">
+<application android:label='"""+app+"""' android:theme="@android:style/Theme.Material.Light.NoActionBar" android:usesCleartextTraffic="true" android:icon="@drawable/app_icon" android:roundIcon="@drawable/app_icon">
 <activity android:name=".MainActivity" android:exported="true" android:configChanges="orientation|screenSize|keyboardHidden">
 <intent-filter><action android:name="android.intent.action.MAIN"/><category android:name="android.intent.category.LAUNCHER"/></intent-filter>
 </activity></application></manifest>""")
