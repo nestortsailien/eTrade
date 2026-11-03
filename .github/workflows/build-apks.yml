@@ -1,9 +1,11 @@
-name: Build eTrade and ePPT APKs
+name: Build offline Android APKs
 on:
   workflow_dispatch:
   push:
     paths:
-      - 'eTrade_ePPT_AndroidStudio*.zip'
+      - 'eTrade.zip'
+      - 'ePPT.zip'
+      - 'scripts/prepare_android.py'
       - '.github/workflows/build-apks.yml'
 jobs:
   build:
@@ -22,22 +24,14 @@ jobs:
       - uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: '8.10.2'
-      - name: Extract Android projects
-        run: |
-          python3 - <<'PY'
-          import glob, zipfile
-          files=glob.glob('eTrade_ePPT_AndroidStudio*.zip')
-          if not files:
-              raise SystemExit('Missing project ZIP. Upload eTrade_ePPT_AndroidStudio原始專案.zip to repository root.')
-          with zipfile.ZipFile(files[0]) as z:
-              z.extractall('.')
-          PY
-      - name: Build debug APK
-        working-directory: Android_Projects/${{ matrix.app }}
+      - name: Prepare offline Android project
+        run: python3 scripts/prepare_android.py ${{ matrix.app }}
+      - name: Build APK
+        working-directory: buildsrc/${{ matrix.app }}
         run: gradle --no-daemon assembleDebug
-      - name: Upload APK
+      - name: Publish APK
         uses: actions/upload-artifact@v4
         with:
           name: ${{ matrix.app }}-apk
-          path: Android_Projects/${{ matrix.app }}/app/build/outputs/apk/debug/*.apk
+          path: buildsrc/${{ matrix.app }}/app/build/outputs/apk/debug/*.apk
           if-no-files-found: error
