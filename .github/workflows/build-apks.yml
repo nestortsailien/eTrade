@@ -1,14 +1,15 @@
-name: Build Android APKs
+name: Build eTrade and ePPT APKs
 on:
   workflow_dispatch:
   push:
     paths:
-      - 'Android_Projects/**'
+      - 'eTrade_ePPT_AndroidStudio*.zip'
       - '.github/workflows/build-apks.yml'
 jobs:
   build:
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
         app: [eTrade, ePPT]
     steps:
@@ -18,12 +19,19 @@ jobs:
           distribution: temurin
           java-version: '17'
       - uses: android-actions/setup-android@v3
-      - name: Install Android SDK
-        run: sdkmanager "platforms;android-35" "build-tools;35.0.0"
-      - name: Install Gradle
-        uses: gradle/actions/setup-gradle@v4
+      - uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: '8.10.2'
+      - name: Extract Android projects
+        run: |
+          python3 - <<'PY'
+          import glob, zipfile
+          files=glob.glob('eTrade_ePPT_AndroidStudio*.zip')
+          if not files:
+              raise SystemExit('Missing project ZIP. Upload eTrade_ePPT_AndroidStudio原始專案.zip to repository root.')
+          with zipfile.ZipFile(files[0]) as z:
+              z.extractall('.')
+          PY
       - name: Build debug APK
         working-directory: Android_Projects/${{ matrix.app }}
         run: gradle --no-daemon assembleDebug
@@ -32,3 +40,4 @@ jobs:
         with:
           name: ${{ matrix.app }}-apk
           path: Android_Projects/${{ matrix.app }}/app/build/outputs/apk/debug/*.apk
+          if-no-files-found: error
